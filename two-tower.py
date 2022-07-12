@@ -91,4 +91,5 @@ def model_fn(features, labels, mode, params):
         train_op = tf.train.AdagradOptimizer(FLAGS.learning_rate).minimize(loss, global_step = global_step)
         return tf.estimator.EstimatorSpec(mode, loss=loss, train_op=train_op)
         
-
+##### tf.estimator.EstimatorSpec: Ops and objects returned from a model_fn and passed to an Estimator
+##### EstimatorSpec fully defines the model to be run by an Estimator.
